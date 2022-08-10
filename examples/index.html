@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script src="../dist/index.umd.js"></script>
+    <script>
+      window.onload = function () {
+
+        // coverImage.getCoverImageUrl('redEnvelope', 'https://resources.laihua.com/2022-5-6/804cb4c1-5706-429d-b168-01da6a8f0883.png').then((e) => {
+        //   const img = document.createElement('img')
+        //   img.src = e
+        //   img.onload = function () {
+        //     document.body.append(img)
+        //   }
+        // })
+
+        // coverImage.getCoverImageUrl('displayRack', 'https://resources.laihua.com/2022-5-6/804cb4c1-5706-429d-b168-01da6a8f0883.png').then((e) => {
+        //   const img = document.createElement('img')
+        //   img.src = e
+        //   img.onload = function () {
+        //     document.body.append(img)
+        //   }
+        // })
+
+        coverImage.getCoverImageUrl('rollUpBanner', 'https://resources.laihua.com/2022-5-6/804cb4c1-5706-429d-b168-01da6a8f0883.png').then((e) => {
+          const img = document.createElement('img')
+          img.src = e
+          console.log(coverImage.toFile());
+          img.onload = function () {
+            document.body.append(img)
+          }
+        })
+      }
+    </script>
+  </body>
+</html>
